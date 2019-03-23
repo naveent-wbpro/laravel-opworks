@@ -3,6 +3,6 @@ when "debian", "ubuntu"
   execute "enable_mcrypt" do
     user "root"
     command "php5enmod mcrypt && service apache2 restart"
-    only_if { ::File.exist?("/etc/php7.2/mods-available/mcrypt.ini") }
+    only_if { ::File.exist?("/etc/php/7.2/mods-available/mcrypt.ini") }
   end
 end
